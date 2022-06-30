@@ -1,0 +1,125 @@
+.to-do-list {
+  box-shadow: 0 20px 40px var(--list-shadow);
+  overflow: hidden;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  transition: all var(--transition-time) ease-in-out;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--item-background);
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1.5rem;
+
+    span {
+      font-size: 0.8rem;
+      color: var(--list-item);
+      font-weight: var(--large-weight);
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 0.5rem;
+      margin-left: 2.5rem;
+
+      li {
+        font-size: 0.8rem;
+      }
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: 0.8rem;
+      color: var(--list-item);
+      transition: all 100ms ease-in-out;
+      font-weight: var(--large-weight);
+    }
+    button:hover, button:focus-visible {
+      color: var(--list-item-hover);
+      transform: scale(1.1);
+      transition: transform 200ms;
+    }
+
+    .active {
+      color: var(--active-list-item);
+    }
+  }
+
+  .MyClassEnterActive {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  .MyClassEnterDone {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: opacity 70ms, transform 100ms;
+  }
+
+  .MyClassExitActive {
+    opacity: 0;
+    transform: scaleY(0);
+    transition: opacity 150ms, transform 150ms;
+  }
+
+  .MyClassExit {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@media (max-width: 580px) {
+  .to-do-list {
+    margin-top: 1rem;
+  }
+
+  .navList {
+    margin-top: 1.5rem;
+    
+    
+    ul {
+    padding: 1rem 2rem;
+    list-style: none;
+    background: var(--item-background);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    box-shadow: 0 20px 40px var(--list-shadow);
+
+
+    li {
+      font-size: 0.8rem;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    font-size: 0.8rem;
+    color: var(--list-item);
+    transition: all 100ms ease-in-out;
+    font-weight: var(--large-weight);
+  }
+  button:hover, button:focus-visible {
+    color: var(--list-item-hover);
+  }
+
+  .active {
+    color: var(--active-list-item);
+  }
+}
+}

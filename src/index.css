@@ -1,13 +1,138 @@
-body {
+*,
+*:before,
+*:after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+button {
+  margin: 0;
+  font-family: "Josefin Sans", Arial, sans-serif;
+  outline: none;
+}
+
+:root {
+  --background-image: url("./Images/bg-mobile-light.jpg");
+  --active-list-item: hsl(220, 98%, 61%);
+  --background-gradient: linear-gradient(
+    135deg,
+    hsl(192, 100%, 67%) 0%,
+    hsl(280, 87%, 65%) 100%
+  );
+  --background-color: hsl(0, 0%, 98%);
+  --completed-task: hsl(233, 11%, 84%);
+  --item-background: hsl(0, 0%, 98%);
+  --list-item: hsl(236, 9%, 61%);
+  --to-do-item: hsl(235, 19%, 35%);
+  --input-text: hsl(235, 19%, 35%);
+  --completed-border: hsl(0, 0%, 93%);
+  --list-shadow: rgba(164, 164, 164, 0.26);
+  --font-size: 18px;
+  --med-weight: 400;
+  --border-bottom: hsla(0, 0%, 69%, 0.403);
+  --large-weight: 700;
+  --transition-time: 300ms;
+  --item-padding: 1.3rem 3rem 1.2rem 4.5rem;
+  --footer: hsl(236, 9%, 61%);
+  --placeholder: hsl(236, 9%, 61%);
+
+}
+
+.dark-mode {
+  --background-image: url("./Images/bg-mobile-dark.jpg");
+  --background-color: hsl(235, 21%, 11%);
+  --completed-task: hsl(230, 16%, 30%);
+  --to-do-item: hsl(234, 39%, 85%);
+  --list-item-hover: hsl(236, 33%, 92%);
+  --list-item: hsl(233, 14%, 35%);
+  --input-text: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --vary-dark-grayish-blue: hsl(237, 14%, 26%);
+  --item-background: hsl(235, 24%, 19%);
+  --border-bottom: hsla(0, 0%, 47%, 0.403);
+  --completed-border: hsl(237, 14%, 26%);
+  --list-shadow: rgba(0, 0, 0, 0.55);
+  --footer: hsl(233, 14%, 35%);
+  --placeholder: hsl(234, 13%, 47%);
+
+
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
+}
+
+/* josefin-sans-regular - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/josefin-sans-v24-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v24-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* josefin-sans-700 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/josefin-sans-v24-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v24-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@media (min-width: 548px) {
+  :root {
+    --background-image: url("./Images/bg-desktop-light.jpg");
+  }
+
+  .dark-mode {
+    --background-image: url("./Images/bg-desktop-dark.jpg");
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 100px var(--item-background) inset !important;
+  -webkit-text-fill-color: var(--to-do-item) !important;
+}
+
+button:focus-visible {
+  outline: 1px dashed var(--to-do-item);
+}
+
+
+@media (max-width: 548px){
+  :root{
+    --font-size: 14px;
+  }
+}
+
+@media (max-width: 440px){
+  :root{
+    --font-size: 11px;
+  }
 }
