@@ -45,7 +45,7 @@ export const AppContext = React.createContext({
 });
 
 export const AppContextProvider = (props) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || todo_list
   );
