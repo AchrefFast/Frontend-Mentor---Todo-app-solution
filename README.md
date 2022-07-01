@@ -42,7 +42,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/AchrefFast/Frontend-Mentor---Todo-app-solution)
-- [Live Site URL](https://frontend-mentor-launch-countdown-timer-ten.vercel.app/)
+- [Live Site URL](https://frontend-mentor-todo-app-solution.vercel.app/)
 
 ## My process
 
